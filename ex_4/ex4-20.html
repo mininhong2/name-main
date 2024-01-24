@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>div 박스에 그림자 만들기</title>    
+<style>
+.redbox
+{
+    box-shadow: 10px 10px red;
+}    
+.blurbox
+{
+    box-shadow: 20px 10px 5px blue;
+}
+.multiEffect
+{
+    box-shadow: 2px 2px black,0 0 25px blue,0 0 5px darkblue;
+}
+div
+{
+    width: 150px;
+    height: 70px;
+    padding: 10px;
+    border: 10px solid gray;
+    background-image: url(../media/spongebob.jpg);
+    background-size: 130px 100px;
+    background-repeat:  no-repeat;
+}
+</style>
+</head>
+<body>
+<h3>박스 그림자 만들기</h3>    
+<hr>
+<div class="redBox">스펀지밥 등장인물</div><br>
+<div class="blurBox">스펀지밥 등장인물</div><br>
+<div class="multiEffect">스펀지밥 등장인물</div>
+</body>    
+</html>

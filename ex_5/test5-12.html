@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>css3로 애니메이션 만들기</title>    
+<style>
+@keyframes textColorAnimation
+{
+    0% { color : blue;}
+    30%{color: yellow;}
+    100%{color: red;}
+}    
+span
+{
+animation-name: textColorAnimation;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+}
+</style>
+</head>    
+<body>
+<h3>애니메이션 만들기</h3>    
+<hr>
+<p><span>span</span>텍스트를 5초에 blue,green,red로 무한 반복합니다.</p>
+</body>
+</html>

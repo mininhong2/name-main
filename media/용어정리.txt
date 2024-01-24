@@ -1,0 +1,157 @@
+html 페이지 기본
+
+
+<!DOCTYPE html>
+<!--이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다.-->
+<html>
+	<head>
+		문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의
+	</head>
+	<body>
+		문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등
+	</body>
+</html>
+
+
+
+<title>:첫 타이틀
+<h1>, ..., <h6> 태그: 문단 제목
+
+<!DOCTYPE html>
+<html>
+<head><title>툴팁 달기</title></head>
+<body>
+<h1 title="h1태그로 작성하였습니다.">
+	1장 홈페이지</h1>
+<h2 title="h2태그로 작성하였습니다.">
+	1절 HTML 언어</h2>
+</body>
+</html>
+
+
+<p>: 단락 나누기
+<hr> 태그: 수평선 긋기
+<br> 태그: 새로운 줄로 넘어가기
+<pre> 태그: 개발자의 포맷 그대로 출력
+<b>진하게
+<strong>중요한
+<em>강조
+<i>이탤릭으로 강조
+<b><i>진하게 이탤릭으로 강조
+보통 문자 <small>한 단계 작은 문자
+<del>삭제
+<ins>추가
+보통문자의 <sup>윗첨자
+보통문자의 <sub>아래첨자
+<mark>하이라이팅
+ 
+블록 태그
+항상 새 라인에서 시작하여 출력
+양 옆에 다른 콘텐츠 배치하지 않고 한 라인 독점 사용
+가장 많이 사용되는 블록 태그 : <div>
+
+인라인 태그
+블록 속에 삽입되어 블록의 일부로 출력
+가장 많이 사용된 인라인 태그 : <span>
+
+
+메타 데이터
+HTML 페이지에 대한 메타 데이터를 담기 위한 태그들
+<base>, <link>, <script>, <style>, <title>, <meta>
+<script>는 <body> 내에도 작성 가능
+<base> 태그: 웹 페이지들의 기본URL과 페이지가 출력될 윈도우 지정
+<link> 태그: 외부 자원 연결에 사용
+<meta> 태그: 다양한 메타 데이터 표현
+alt: 이미지가 없거나 손상되는 등 이미지를 출력한 수 없는 경우 출력되는 문장, 필수 속성.
+width: 너비 ↔
+height: 높이↕
+
+순서 있는 리스트(ordered list) - <ol></ol>
+순서 없는 리스트(unordered list) - <ul></ul>
+정의 리스트(definition list) - <dl></dl>
+
+<li>…</li>
+</li> 생략 가능
+
+<table> : 표 전체를 담는 컨테이너
+<caption> : 표 제목
+<thead> : 헤딩 셀 그룹
+<tfoot> : 바닥 셀 그룹
+<tbody> : 데이터 셀 그룹
+<tr> : 행. 여러 <td>, <th> 포함
+<th> : 열 제목(헤딩) 셀
+<td> : 데이터 셀
+
+<table> 
+	<caption>표제목</caption>
+	<thead> ... </thead>
+	<tfoot> ... </tfoot>	
+	<tbody> ... </tbody>
+</table>
+
+<a> 태그의 href 속성을 이용하여 하이퍼링크 작성
+target: 링크에 연결된 HTML 페이지가 출력될 윈도우 이름 지정
+_blank 		- 새로운 브라우저 윈도우(탭) 생성
+_self 		- 현재 윈도우
+_parent 		- 부모 윈도우
+_top 		- 최상위 브라우저 윈도우
+
+<a> 태그의 id 속성으로 앵커 만들기
+
+iframe: 태그를 다루지 않는 브라우저에 의해 대신 출력되는 텍스트
+srcdoc : 직접HTML 태그로 작성된 텍스트로서 출력될 내용 ※srcdoc 속성이 있으면 src 속성은 무시됨
+
+미디어 삽입
+<audio>, <video> 태그
+controls: 재생,재생 시간, 중단, 음소거등 제어 버튼 출력
+autoplay: 비디오 로딩 즉시 재생
+loop: 반복재생
+muted: 오디오를 끌 때 사용
+
+chap03.
+<header>
+페이지나 섹션의 머리말 표현
+페이지 제목, 페이지를 소개하는 간단한 설명
+<nav>
+하이퍼링크들을 모아 놓은 특별한 섹션
+페이지 내 목차를 만드는 용도
+<section>
+문서의 장(chapter, section) 혹은 절을 구성하는 역할
+일반 문서에 여러 장이 있듯이 웹 페이지에 여러 <section>가능
+헤딩 태그(<h1>~<h6>)를 사용하여 절 혹은 섹션의 주제 기입
+<article>
+본문과 연관 있지만, 독립적인 콘텐츠를 담는 영역
+혹은 보조 기사, 블로그 포스트, 댓글 등 기타 독립적인 내용
+<article>에 담는 내용이 많은 경우 여러 <section> 둘 수 있음
+<aside>
+본문에서 약간 벗어난 노트나 팁 
+신문, 잡지에서 주요 기사 옆 관련 기사, 삽입 어구로 표시된 논평 등
+페이지의 오른쪽이나 왼쪽에 주로 배치
+<footer>
+꼬리말 영역, 주로 저자나 저작권 정보
+
+폼 태그 <form>태그로 둘러싸는 모양
+name 속성: 폼의 이름 지정
+action 속성: 폼 데이터를 처리할 웹 서버 응용프로그램의 이름
+method 속성: 폼 데이터를 웹 서버로 전송하는 형식
+target : 웹 서버 응용 프로그램으로부터 전송받은 데이터(html문서나 이미지)를 출력할 윈도우 이름
+
+
+<input type="text"> 한줄 텍스트 입력창
+<input type="password"> 암호입력을 위한 한줄 텍스트 입력 창
+<input type="button"> 단순버튼
+<input type="submit"> 웹 서버로 폼 데이터를 전송시키는 버튼
+<input type="reset"> 입력된 폼 데이터를 초기화시키는 버튼
+<input type="image"> 이미지버튼
+<input type="checkbox'/radio"> 체크박스와 라디오 버튼
+<select>  드롭다운 리스트를 가진 콤보박스
+<input type=month/week/date/time/datetime-local> 년,월,일,시간등의 시간 정보 입력창
+<input type="number/range"> 스핀버튼과 슬라이드바로 편리한 숫자 입력 창
+<input type="color"> 색 립력을 쉽게 하는 컬러 다이얼로그
+<input type="email/url/tel/search"> 이메일,URL,전화번호, 검색키워드 등 형식 검사 기능을 가진 텍스트 입력창
+<input type="file"> 로컬 컴퓨터의 파일을 선택하는 폼 요소
+<button type="button/reset/submit"> 단순버튼,reset,submit 버튼
+<textarea> 여러 줄의 텍스트 입력 창
+
+
+

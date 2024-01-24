@@ -1,0 +1,12 @@
+ctrl+` 터미널 열기
+ctrl+shift+` 
+home  행의 시작 
+end 끝으로 이동
+ctrl+D 줄 복사
+Ctrl + Shift + K 줄 삭제 
+
+
+\\desktop-lfdqbmf\metaverse
+
+
+
