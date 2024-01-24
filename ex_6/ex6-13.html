@@ -5,7 +5,7 @@
   <title>비트 연산</title>
   <script>
     function digit8(v) {// 숫자v를 8비트 2진수로 변환
-      var str = "";
+      let str = "";
       for (i =0; i<8; i++, v <<= 1) {
         if ((v & 0x80)) str += "1";
         else str += "0";
