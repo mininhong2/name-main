@@ -17,7 +17,9 @@
         var i = 0, sum = 0;
         while (i <= n) 
         {
-            sum +=i;
+            if(i%10 !=9) {
+             sum +=i;
+            }
             i++;
         }
             document.write("0에서" + n + "까지 합은" + sum);
