@@ -13,28 +13,47 @@ function withdraw(money)
   return money;
 }
 // 사용자 객체 만들기
-let account = new Object();
-account.owner = "황기태"; //계좌 주인 프로퍼티 생성 및 초기화
-account.code = '111'; //코드 프로퍼티 생성 및 초기화
-account.balance = 35000; //잔액 프로퍼티 생서 및 초기화
-account.inquiry = inquiry; //메소드 작성
-account.deposit = deposit; //메소드 작성
-account.withdraw = withdraw; // 메소드 작성
+let account1 = new Object();
+account1.owner = "황기태";  //계좌 주인 프로퍼티 생성 및 초기화
+account1.code = '111'; //코드 프로퍼티 생성 및 초기화
+account1.balance = 35000; //잔액 프로퍼티 생서 및 초기화
+account1.inquiry = inquiry; //메소드 작성
+account1.deposit = deposit; //메소드 작성
+account1.withdraw = withdraw; // 메소드 작성
+
+let account2 = new Object();
+account2.owner = "민인홍";  //계좌 주인 프로퍼티 생성 및 초기화
+account2.code = '222'; //코드 프로퍼티 생성 및 초기화
+account2.balance = 30000; //잔액 프로퍼티 생서 및 초기화
+account2.inquiry = inquiry; //메소드 작성
+account2.deposit = deposit; //메소드 작성
+account2.withdraw = withdraw; // 메소드 작성
+
+let accounts = new Array();
+accounts[0]= account1;
+accounts[1]= account2;
 </script>
 </head>    
 <body>
 <h3>new object()로 사용자 객체 만들기</h3>    
 <hr>
 <script>
-    document.write("account : ");
-	document.write(account.owner + ", ");
-	document.write(account.code + ", ");
-	document.write(account.balance + "<br>");
+    
+    for(let i = 0; i<accounts.length; i++)
+    {
 
-    account.deposit(10000); //10000원 저금
-    document.write("10000원 저금 후 작액은 " + account.inquiry()+ "<br>");
-    account.withdraw(5000); //5000원 인출
-    document.write("5000원 인출 후 작액은" + account.inquiry() + "<br>");
+        document.write("account" +(i + 1) + ":");
+        document.write(accounts[i].owner + ", ");
+        document.write(accounts[i].code + ", ");
+        document.write(accounts[i].balance + "<br>");
+        
+        accounts[i].deposit(10000); //10000원 저금
+        document.write("10000원 저금 후 잔액은 " + accounts[i].inquiry()+ "<br>");
+        accounts[i].withdraw(5000); //5000원 인출
+        document.write("5000원 인출 후 잔액은" + accounts[i].inquiry() + "<br>");
+        document.write("<br>")
+    }
+        
 </script>
 </body>
 </html>

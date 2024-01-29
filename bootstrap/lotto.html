@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>로또생성</title>
+    </head>
+    <body>
+        <script>
+var lotto = []; 
+
+
+for(var i=0;i<4;i++){
+  
+  var num = Math.floor(Math.random() * 9) + 1;
+
+  for(var j in lotto){
+    while(num == lotto[j])
+    { 
+      num = Math.floor(Math.random() * 9) + 1;
+    }
+  }
+
+ 
+  lotto.push(num);
+  
+}
+
+
+lotto.sort(function(a,b){
+  return a - b;
+});
+
+document.write('이번주 로또 번호 : ' + lotto);
+        </script>
+    </body>
+</html>
