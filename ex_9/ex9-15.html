@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><title>new Image()로 이미지 로딩</title>
+<script>
+let files = ["images/penguins.jpg", 
+             "images/lighthouse.jpg",
+             "images/Chrysanthemum.jpg",
+             "images/Desert.jpg",
+             "images/Hydrangeas.jpg",
+             "images/Jellyfish.jpg",
+             "images/Koala.jpg",
+             "images/Tulips.jpg"];
+let imgs = new Array();
+for(var i=0; i<files.length; i++) 
+{
+	imgs[i] = new Image(); 
+	imgs[i].src = files[i]; 
+}
+
+// 다음 이미지 출력
+let next = 1;
+function change(img) 
+{
+	img.src = imgs[next].src; 
+	next++; 
+	next %= imgs.length;
+}
+</script></head>
+<body>
+<h3>new Image()로 이미지 로딩</h3>
+<hr>
+이미지를 클릭하면 다음 이미지를 보여줍니다.<p>
+<img style="border:20px ridge wheat" 
+src="images/penguins.jpg" alt="."  width="200" height="200" 
+onclick="change(this)">
+</body></html>
