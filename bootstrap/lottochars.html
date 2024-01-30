@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lotto Num Check</title>
+  </head>
+  <body>
+    <h3>Lotto Num Check</h3>
+    <script>
+      let lottonum = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E"];
+      let lotto = [];
+      let lottotry = [];  //추첨된 복권 번호
+      let cnt = 0; // 당첨까지 시도된 횟수
+
+      while(true) {
+        for(let i=0; i<4; i++) {
+          lotto.push(lottonum[Math.floor(Math.random()*15)]);
+        }
+
+        let dupItems = lotto.filter((item, index) =>
+            lotto.indexOf(item) != index);
+        let check1 = new Array();
+        check1.push(dupItems);
+        //document.write('중복 문자:' + dupItems);
+        if(check1[0] =="")
+             break;
+        else {
+            check1.pop();
+            lotto.length = 0;
+        }
+      }
+      document.write('당첨 번호:' + lotto);
+      
+      let cflag = true;
+      while(cflag) {
+        for(let i=0; i<4; i++) {
+          lottotry.push(lottonum[Math.floor(Math.random()*15)]);
+        }
+        cnt++;
+        document.write("이 번에 추첨된 번호 : " + lottotry);
+       
+        let bingo1 = [];
+
+        for(let j=0; j<lottotry.length; j++) 
+          bingo1[j] = (lottotry[j] == lotto[j]);
+        
+        let bingo2 = [];
+        
+        for(let k=0; k < 4; k++) 
+            bingo2[k] = (bingo1[k] == true);
+        document.write("<br>");
+        document.write("bingo2[] :" + bingo2);
+        document.write("<br>");
+        
+        let bingo3 = true;
+
+        for(let l=0; l < 4; l++)
+            if (bingo2[l] == false) {
+              bingo3 = false;
+            }
+       document.write("<br>");
+       document.write("현재 bingo3의 값:" + bingo3);
+       document.write("<br>");
+       //bingo3 = false;
+       // cnt++;
+       
+       //let fflag = new Boolean(bingo3);
+       //if(bingo3) {
+       if(bingo3){
+           document.write("복권 당첨에 걸린 시도 회수: " + cnt);
+           cflag = false;
+        }
+        else {
+           lottotry.length = 0;
+           document.write("계속 추첨");
+           document.write("<br>");
+          // break;
+        }
+        
+       
+    } 
+
+    </script>
+  </body>
+
+</html>

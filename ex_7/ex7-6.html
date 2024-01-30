@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,4 +20,27 @@ document.write(current.getMinutes(),"분,");
 document.write(current.getSeconds(), "초<br>");
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<title>방문 시간에 다라 변하는 배경색</title>    
+</head>    
+<body>
+<h3>페이지 방문 초시간이 짝수이면"orange" ,홀수이면 "violet" 배경</h3>
+<hr>
+<script>
+    let current = new Date();
+    if(current.getSeconds()%2==0)
+document.body.style.backgroundColor = "orange";
+else
+document.body.style.backgroundColor = "violet";
+
+document.write("현재 시간:");
+document.write(current.getHours(),"시,");
+document.write(current.getMinutes(),"분,");
+document.write(current.getSeconds(), "초<br>");
+</script>
+</body>
+>>>>>>> 3aa5570b7aab8c87944effcadb136c2ce003cfd2
 </html>

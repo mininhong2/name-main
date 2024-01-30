@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head><title>문서의 동적 구성</title>
@@ -46,3 +47,53 @@ newP.appendChild(newSPAN);
 <a href="javascript:createDIV()">DIV</a>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head><title>문서의 동적 구성</title>
+<script>
+function createDIV() 
+{
+let obj = document.getElementById("parent");
+let newDIV = document.createElement("div");
+newDIV.innerHTML = "&lt;div&gt;";
+newDIV.setAttribute("id", "myDiv");
+newDIV.style.backgroundColor = "skyblue";
+obj.appendChild(newDIV);
+
+let newDIV1 = document.createElement("div");
+newDIV1.innerHTML = "&lt;div&gt;";
+newDIV1.setAttribute("id", "myDiv1");
+newDIV1.style.backgroundColor = "orange";
+newDIV.appendChild(newDIV1);
+
+let newP = document.createElement("p");
+newP.innerHTML = "&lt;p&gt;여기는 P태그";
+newP.setAttribute("id","myP");
+newP.style.backgroundColor = "green";
+newDIV1.appendChild(newP); 
+
+let newSPAN = document.createElement("span");
+newSPAN.innerHTML = "&lt;span&gt;태그강조&lt;/span&gt;";
+newSPAN.setAttribute("id", "myspan");
+newSPAN.style.backgroundColor = "blueviolet";
+newP.appendChild(newSPAN);
+
+newSPAN.onclick = function() 
+{
+let newP = this.parentElement; 
+newP.removeChild(this); 
+};	
+newP.appendChild(newSPAN);
+}
+
+
+</script>
+</head>
+<body id="parent">
+<h3>동적 생성 및 제거</h3>
+<hr>
+<a href="javascript:createDIV()">DIV</a>
+</body>
+</html>
+>>>>>>> 3aa5570b7aab8c87944effcadb136c2ce003cfd2

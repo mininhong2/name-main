@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>  
+</head>    
+<body>
+<h3>생일 축하합니다.</h3>    
+<hr>
+<script>
+    function birthday(name, dbirth) {
+        let today = new Date();
+        if(this.dbirth.getMonth() == today.getMonth()
+           && this.dbirth.getDate() == today.getDate() ) {
+        document.write(this.name + "님 생일 축하합니다!!!")}
+    }
+
+    let student1 = new Object();
+    student1.name = "민인홍";
+    student1.dbirth = new Date("1998.08.24");
+    student1.birthday = birthday;
+    student1.birthday(this.name, this.dbirth);
+
+    let student2 = new Object();
+    student2.name = "이보겸";
+    student2.dbirth = new Date("2000.01.25");
+    student2.birthday = birthday;
+    student2.birthday(this.name, this.dbirth);
+
+    let student3 = new Object();
+    student3.name = "박인철";
+    student3.dbirth = new Date("1996.08.21");
+    student3.birthday = birthday;
+    student3.birthday(this.name, this.dbirth);
+
+    let student4 = new Object();
+    student4.name = "전영관";
+    student4.dbirth = new Date("1997.05.25");
+    student4.birthday = birthday;
+    student4.birthday(this.name, this.dbirth);
+
+    let student5 = new Object();
+    student5.name = "백현준";
+    student5.dbirth = new Date("2000.09.21");
+    student5.birthday = birthday;
+    student5.birthday(this.name, this.dbirth);
+
+    let student6 = new Object();
+    student6.name = "성시언";
+    student6.dbirth = new Date("1986.07.29");
+    student6.birthday = birthday;
+    student6.birthday(this.name, this.dbirth);
+
+    let student7 = new Object();
+    student7.name = "황기태";
+    student7.dbirth = new Date("2000.01.29");
+    student7.birthday = birthday;
+    student7.birthday(this.name, this.dbirth);
+    
+//let ret = prompt("생일을 입력하세요");   
+//l//et now = new Date();
+//document.write("현재 시간:"+now.toLocaleString()+ "<br><hr>");
+//document.write("<br>");
+
+
+</script>
+</body>
+</html>
