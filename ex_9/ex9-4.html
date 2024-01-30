@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,30 +23,3 @@ function(){ this.style.backgroundColor="white"; }
 <p id="p">마우스 올리면 orchid 색으로 변경</p>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-<title>익명 함수로 이벤트 리스너 작성</title>
-<script>
-let p;
-function init() 
-{ 
-p = document.getElementById("p"); 
-p.onmouseover = function () 
-{
-this.style.backgroundColor = "orchid";
-};
-p.addEventListener("mouseout", 
-function(){ this.style.backgroundColor="white"; } 
-);
-}
-</script>
-</head>
-<body onload="init()">
-<h3>익명 함수로 이벤트 리스너 작성</h3>
-<hr>
-<p id="p">마우스 올리면 orchid 색으로 변경</p>
-</body>
-</html>
->>>>>>> 3aa5570b7aab8c87944effcadb136c2ce003cfd2
