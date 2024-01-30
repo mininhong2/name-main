@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>복권</title>
+<style>
+    div
+    {
+    display: inline-block;
+      font-weight: bold;
+    }
+</style>
+<script>
+    function randomlnt() 
+    {
+        return Math.floor(Math.random()*15)+1;  
+        
+    }
+</script>
+</head> 
+<body>
+<h3>복권</h3>    
+<hr>
+<h4>축하합니다!</h4>
+<script>
+    let lotto ;
+let check1 = lotto["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e"];
+for(i=0; i<4; i++)
+{
+    
+let ques = randomlnt() ;
+document.write("<div>"+ ques+ "&nbsp;"+ "<div>"); 
+let duplicateItems = lotto.filter((item, index) => lotto.indexOf(item) != index);
+let check1 = new Array();
+            check1.push(duplicateItems);
+            document.write('중복된 번호 : ' + check1[0]);
+            //break;
+            if (check1[0] == "")
+                  break;
+            else
+                check1.pop();         
+}
+      
+
+</script>
+</body>   
+</html>
