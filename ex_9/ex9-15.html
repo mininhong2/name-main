@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html><head><title>new Image()로 이미지 로딩</title>
 <script>
-let files = ["images/penguins.jpg", 
-             "images/lighthouse.jpg",
-             "images/Chrysanthemum.jpg",
-             "images/Desert.jpg",
-             "images/Hydrangeas.jpg",
-             "images/Jellyfish.jpg",
-             "images/Koala.jpg",
-             "images/Tulips.jpg"];
+let files = ["../media/orange.jpg", 
+             "../media/painapple.jpg",
+             "../media/kiwi.jpg",
+             "../media/짜장면.jpg",
+             "../media/짬뽕.jpg",
+             "../media/탕수육.jpg",
+             "../media/dog.png",
+             "../media/beach.jpg"];
 let imgs = new Array();
-for(var i=0; i<files.length; i++) 
+for(let i=0; i<files.length; i++) 
 {
 	imgs[i] = new Image(); 
 	imgs[i].src = files[i]; 
@@ -30,6 +30,6 @@ function change(img)
 <hr>
 이미지를 클릭하면 다음 이미지를 보여줍니다.<p>
 <img style="border:20px ridge wheat" 
-src="images/penguins.jpg" alt="."  width="200" height="200" 
+src="../media/alert.jpg" alt="."  width="200" height="200" 
 onclick="change(this)">
 </body></html>

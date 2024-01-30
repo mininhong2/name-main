@@ -17,7 +17,7 @@ obj.style.borderColor = "violet";
 }
 function out(obj) 
 {
-obj.style.borderColor = "lightgray";
+obj.style.borderColor = "yellow";
 }
 function wheel(e, obj) 
 {
@@ -33,3 +33,16 @@ obj.style.borderWidth = width+"px";
 }
 </script>
 </head>
+<body>
+<h3>마우스 관련 이벤트 리스너</h3>
+<hr>
+<div>마우스 관련 
+<span onmousedown="down(this)"
+onmouseup="up(this)"
+onmouseover="over(this)"
+onmouseout="out(this)"
+onwheel="wheel(event, this)">이벤트
+</span>가 발생합니다.
+</div>
+</body>
+</html>
