@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>  
+</head>    
+<body>
+<h3>생일 축하합니다.</h3>    
+<hr>
+<script>
+    function birthday(name, dbirth) {
+        let today = new Date();
+        if(this.dbirth.getMonth() == today.getMonth()
+           && this.dbirth.getDate() == today.getDate() ) {
+        document.write(this.name + "님 생일 축하합니다!!!")}
+    }
+
+    let student1 = new Object();
+    student1.name = "민인홍";
+    student1.dbirth = new Date("1998.01.30");
+    student1.birthday = birthday;
+    student1.birthday(this.name, this.dbirth);
+</script>
+</body>
+</html>
